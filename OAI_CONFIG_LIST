@@ -1,0 +1,21 @@
+[
+    {
+        "model": "mistralai/Mistral-7B-Instruct-v0.2",
+        "api_key": "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",
+        "base_url": "http://34.41.136.193:8000"
+    },
+    {
+        "model": "<your Azure OpenAI deployment name>",
+        "api_key": "<your Azure OpenAI API key here>",
+        "base_url": "<your Azure OpenAI API base here>",
+        "api_type": "azure",
+        "api_version": "2024-02-15-preview"
+    },
+    {
+        "model": "<your Azure OpenAI deployment name>",
+        "api_key": "<your Azure OpenAI API key here>",
+        "base_url": "<your Azure OpenAI API base here>",
+        "api_type": "azure",
+        "api_version": "2024-02-15-preview"
+    }
+]

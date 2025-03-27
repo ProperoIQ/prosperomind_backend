@@ -1,0 +1,11 @@
+Prompts,Pandas code
+What is the total taxable value for each Deductor?,df.groupby('Deductors_Name')[' Taxable_Value '].sum()
+List all records where Total_GST is zero.,df[df['Total_GST'] == 0]
+"Filter the data for a specific state, e.g., Gujarat.",df[df['Deductor_State'] == 'Gujarat']
+Identify rows where 'Remarks' contain 'Credit already availed'.,df[df['Remarks'].str.contains('Credit already availed')]
+Calculate the total IGST for each state.,df.groupby('Deductor_State')[' IGST '].sum()
+Get all distinct GSTINs in the dataset.,df['GSTIN_of_Deductor'].unique()
+"Retrieve the data for a specific year, e.g., 2018-19.",df[df['Year'] == '2018-19']
+Count the number of entries for each Division.,df['Division'].value_counts()
+"Find rows where Taxable_Value is greater than 5,00,000.",df[df[' Taxable_Value '] > 500000]
+Sort the data by 'Total_GST' in descending order.,"df.sort_values(by='Total_GST', ascending=False)"
