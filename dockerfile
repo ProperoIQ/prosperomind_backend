@@ -11,7 +11,7 @@ COPY gcpcred.json /src/gcpcred.json
 
 # Set the environment variable for Google credentials
 ENV GOOGLE_APPLICATION_CREDENTIALS=/src/gcpcred.json
-ENV OPENAI_API_KEY=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
+ENV OPENAI_API_KEY=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
 
 
 # Copy the requirements file into the container
