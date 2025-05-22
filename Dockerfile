@@ -1,10 +1,15 @@
-# Use an official Python runtime as the base image
+# Start from the official Python image, using the 'slim' version for smaller size
 FROM python:3.12-slim
 
+# Set environment variable to prevent Python from writing .pyc files and enable buffering
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
 
+# Set the working directory
+WORKDIR /app
 
-# Copy the requirements file into the container
-WORKDIR /app/src
+# Install build dependencies and clear cache to keep the image light
+RUN apt-get update && apt-get install -y build-essential && rm -rf /var/lib/apt/lists/*
 
 # Copy the service account key file
 COPY gcpcred.json /src/gcpcred.json
